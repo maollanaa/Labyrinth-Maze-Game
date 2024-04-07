@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div id="page">
+    <div id="best-result">
+      <p id="best-reach"></p>
+      <p id="best-moves"></p>
+      <p id="best-time"></p>
+    </div>
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Selamatt!!</h1>
+        <p>Bajak laut telah menemukan harta karunnya.</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Mulai Lagi" />
+      </div>
+    </div>
+
+    <br>
+    <div id="menu">
+      <div class="custom-select">
+        <select id="diffSelect">
+          <option value="10">Mudah</option>
+          <option value="15">Sedang</option>
+          <option value="25">Sulit</option>
+        </select>
+      </div>
+      <input id="startMazeBtn" type="button" value="Mulai" />
+    </div>
+
+    
+    
+    <div id="view" style="display: none;">
+      <div id="mazeContainer">
+        <div>
+          <p>Langkah: <span id="step-count">0</span>, Waktu: <span id="time-elapsed">0 detik</span></p>
+        
+        </div>
+        <canvas id="mazeCanvas" class="border" height="2000" width="2000"></canvas>
+      </div>
+    </div>
+    <div id="instructions">Buat si bajak laut agar menemukan harta karun!</div>
+  </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+  <script src="./script.js"></script>
+
+  <audio id="stepSound" src="./stepfoot.mp3"></audio>
+  <audio id="winSound" src="./winsound.mp3"></audio>
+
+  <video id="background-video" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
+</body>
+
+</html>
